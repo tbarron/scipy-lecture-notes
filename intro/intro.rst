@@ -14,8 +14,9 @@ The scientist's needs
 
 * Manipulate and process data,
 
-* Visualize results, quickly to understand, but also with high quality
-  figures, for reports or publications.
+* Visualization of results
+  * Rapid visualization to support understanding of data
+  * High quality figure production to support publication
 
 Python's strengths
 ..................
@@ -25,9 +26,9 @@ Python's strengths
   don't want to re-program the plotting of a curve, a Fourier transform
   or a fitting algorithm. Don't reinvent the wheel!
 
-* **Easy to learn** Most scientists are not payed as programmers, neither
-  have they been trained so. They need to be able to draw a curve, smooth
-  a signal, do a Fourier transform in a few minutes.
+* **Easy to learn** Most scientists are not trained or paid as programmers.
+  They need accessible software they can quickly start using to draw
+  curves, smooth signals, compute Fourier transforms, and the like.
 
 * **Easy communication** To keep code alive within a lab or a company
   it should be as readable as a book by collaborators, students, or
@@ -35,10 +36,10 @@ Python's strengths
   lengthy routine specifications that would divert the reader from
   mathematical or scientific understanding of the code.
 
-* **Efficient code** Python numerical modules are computationally
-  efficient. But needless to say that a very fast code becomes useless if
-  too much time is spent writing it. Python aims for quick development
-  times and quick execution times.
+* **Efficient code** Python numerical modules strike a balance between
+  quick development and quick execution. The most efficient software in the
+  world would be useless if writing it took forever. Python allows for
+  efficient use of both the programmer's and the computer's time.
 
 * **Universal** Python is a language used for many different problems.
   Learning Python avoids learning a new software for each new problem.
@@ -246,8 +247,8 @@ and much more packages not documented in the scipy lectures.
 Before starting: Installing a working environment
 --------------------------------------------------
 Python comes in many flavors, and there are many ways to install it.
-However, we recommend to install a scientific-computing distribution,
-that comes readily with optimized versions of scientific modules.
+However, we recommend installing a scientific-computing distribution
+that includes optimized versions of scientific modules.
 
 .. warning:: **You should install Python 3**
 
@@ -298,10 +299,10 @@ embedded devices.
 Interactive work
 .................
 
-We recommend an interactive work with the `IPython
+We recommend working with an interactive console like the `IPython
 <http://ipython.org>`__ console, or its offspring, the `Jupyter notebook
 <http://jupyter.readthedocs.io/en/latest/content-quickstart.html>`_. They
-are handy to explore and understand algorithms.
+are handy for exploring and understanding algorithms.
 
 .. sidebar:: Under the notebook
 
@@ -382,14 +383,17 @@ resulting variables:
 
 .. topic:: **From a script to functions**
 
-    While it is tempting to work only with scripts, that is a file full
-    of instructions following each other, do plan to progressively evolve
-    the script to a set of functions:
+    While it is tempting to write all your code at the top level of
+    scope, outside any function, thus producing a `script` (i.e., a file
+    of sequential instructions at the same level), you should plan to
+    incrementally evolve such code into a set of functions for the
+    following reasons:
 
-    * A script is not reusable, functions are.
+    * Functions are much more easily reusable than scripts.
 
-    * Thinking in terms of functions helps breaking the problem in small
-      blocks.
+    * Thinking in terms of functions help with `decomposing` the problem
+      into smaller pieces, each of which can be solved easily and
+      independently.
 
 
 IPython and Jupyter Tips and Tricks
@@ -401,9 +405,9 @@ functions*, and *aliases*.
 
 |
 
-**Command history** Like a UNIX shell, the IPython console supports
-command history. Type *up* and *down* to navigate previously typed
-commands:
+**Command history** Like a UNIX shell, the IPython console supports command
+history. Type *up* and *down* (i.e., press the up and down arrow keys) to
+navigate previously typed commands:
 
 .. sourcecode:: ipython
 
@@ -415,7 +419,7 @@ commands:
 
 |
 
-**Tab completion** Tab completion, is a convenient way to explore the
+**Tab completion** Tab completion is a convenient way to explore the
 structure of any object you’re dealing with. Simply type object_name.<TAB> to
 view the object’s attributes. Besides Python objects and keywords, tab
 completion also works on file and directory names.*
@@ -502,14 +506,16 @@ Other useful magic functions are:
 
 **Aliases**
 Furthermore IPython ships with various *aliases* which emulate common UNIX
-command line tools such as ``ls`` to list files, ``cp`` to copy files and ``rm`` to
-remove files (a full list of aliases is shown when typing ``alias``).
+command line tools such as ``ls`` to list files, ``cp`` to copy files and
+``rm`` to remove files (the command ``alias`` will display a full list of
+aliases).
 
 .. topic:: **Getting help**
 
     * The built-in cheat-sheet is accessible via the ``%quickref`` magic
       function.
 
-    * A list of all available magic functions is shown when typing ``%magic``.
+    * The command ``%magic`` will display a list of all available magic
+      functions.
 
 .. :vim:spell:
